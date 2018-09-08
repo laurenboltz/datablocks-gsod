@@ -12,7 +12,6 @@ view: bq_zipcode_station {
     group_label: "Zipcode"
     label: "ZIP (ZCTA)"
     type: zipcode
-    map_layer_name: us_zipcode_tabulation_areas
     sql: RPAD(cast(${TABLE}.zip_code as string), 5, '0') ;;
   }
 

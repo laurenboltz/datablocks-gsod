@@ -4,7 +4,6 @@ view: bq_zipcode_facts {
   dimension: zipcode {
     primary_key: yes
     hidden: yes
-    map_layer_name: us_zipcode_tabulation_areas
     type: zipcode
     sql: RPAD(cast(${TABLE}.zip_code as string), 5, '0') ;;
   }
