@@ -4,6 +4,7 @@ connection: "lookerdata_publicdata_standard_sql"
 include: "*.view"
 include: "bigquery.*.view.lkml"
 
+
 datagroup: lauren_thesis_weatherblock_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
@@ -36,6 +37,7 @@ explore: gsod {
     relationship: many_to_one
     sql_on: ${zipcode_station.zipcode} = ${zipcode_county.zipcode}  ;;
   }
+
   join: zipcode_facts {
     from: bq_zipcode_facts
     view_label: "Geography"
