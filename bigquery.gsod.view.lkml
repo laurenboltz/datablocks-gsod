@@ -93,7 +93,6 @@ view: bq_gsod {
   }
 
   measure: total_snow_inches {
-    group_label: "Station"
     type: sum
     sql: ${snow};;
     value_format_name: decimal_2
@@ -104,6 +103,7 @@ view: bq_gsod {
     sql: ${rainfall} ;;
     value_format_name: decimal_2
   }
+
 
 
 ## Aggregated Station Counts by Year --
