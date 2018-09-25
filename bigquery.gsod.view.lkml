@@ -104,6 +104,13 @@ view: bq_gsod {
     value_format_name: decimal_2
   }
 
+  measure: average_windspeed {
+    type: average
+    sql: ${windspeed} ;;
+    value_format_name: decimal_2
+
+  }
+
 
 
 ## Aggregated Station Counts by Year --
